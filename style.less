@@ -1,8 +1,24 @@
 @width: 100px;
 @height: @width - 50px;
 
-div {
+.t1 {
   border: 1px solid black;
   width: @width;
   height: @height;
+}
+
+.t2 {
+  border-top: 1px dotted black;
+  border-bottom: 2px solid black;
+}
+
+.t2-1 {
+  color: red;
+  .t2();
+}
+
+.t2-2 {
+  .t2-1();
+  border-left: 3px solid gray;
+  border-right: 2px solid pink;
 }
